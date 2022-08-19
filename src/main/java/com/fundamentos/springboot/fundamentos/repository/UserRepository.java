@@ -38,11 +38,14 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findByNameContainingOrderByIdDesc(String name);
 
+    /*
     @Query("SELECT new com.fundamentos.springboot.fundamentos.dto.UserDto(u.id, u.name, u.birthDate)" +
             "FROM User u" +
             "WHERE u.birthDate=:parameterDate" +
             "AND u.email=:parameterEmail")
     Optional<UserDto> getAllByBirthDateAndEmail(@Param("parameterDate") LocalDate BirthDate,
                                             @Param("parameterEmail") String email);
+
+     */
 
 }
